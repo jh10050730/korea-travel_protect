@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>국내 여행 가이드 - 춘천</title>
+    <!-- 외부 스타일시트 연결 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== 헤더 영역: 로고 + 내비게이션 메뉴 ===== -->
+    <header>
+      <!-- 로고: 클릭 시 메인(index) 페이지로 이동 -->
+      <a href="index.html" class="logo">🗺️ 국내 여행 가이드</a>
+
+      <!-- 상단 내비게이션 메뉴: 도시별 페이지 링크 -->
+      <nav>
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="seoul.html">서울</a></li>
+          <li><a href="busan.html">부산</a></li>
+          <li><a href="jeju.html">제주</a></li>
+          <li><a href="gyeongju.html">경주</a></li>
+          <li><a href="gangneung.html">강릉</a></li>
+          <li><a href="incheon.html">인천</a></li>
+          <li><a href="jeonju.html">전주</a></li>
+          <li><a href="yeosu.html">여수</a></li>
+          <li><a href="chuncheon.html" class="active">춘천</a></li>
+          <!-- 현재 페이지 활성화 표시 -->
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== 히어로 섹션: 춘천 대표 배경 이미지 + 소개 문구 ===== -->
+    <section class="sub-hero hero-chuncheon">
+      <h2>Chuncheon, 호수와 산이 자아내는 힐링</h2>
+    </section>
+
+    <!-- ===== 메인 콘텐츠 영역 ===== -->
+    <main class="container">
+      <!-- 섹션 제목 -->
+      <h3 class="section-title">📍 춘천 핵심 로컬 정보 큐레이션</h3>
+
+      <!-- 춘천 명소/맛집 정보 테이블 -->
+      <!-- ※ 명소 3개 + 맛집 3개 구성 / 추천 시간대별 색상 구분 적용 -->
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>분류</th>
+            <th>이름</th>
+            <th>특징 및 추천 이유</th>
+            <th>추천 시간대</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 명소 1: 제이드가든 수목원 (아침/오전) -->
+          <tr>
+            <td><span class="category-badge badge-sight">명소</span></td>
+            <td style="font-weight: bold">제이드가든 수목원</td>
+            <td>
+              '숲속의 작은 이탈리아'를 컨셉으로 고즈넉한 유럽식 정원과 아침 이슬
+              속 산책로
+            </td>
+            <td style="color: #0284c7; font-weight: 600">☀️ 아침/오전</td>
+          </tr>
+
+          <!-- 명소 2: 남이섬 (점심/오후) -->
+          <tr>
+            <td><span class="category-badge badge-sight">명소</span></td>
+            <td style="font-weight: bold">남이섬 (나미나라공화국)</td>
+            <td>
+              메타세쿼이아 길과 은행나무 길 등 사계절 아름다운 자연 속 유원지와
+              메인 랜드마크
+            </td>
+            <td style="color: #ea580c; font-weight: 600">⛅ 점심/오후</td>
+          </tr>
+
+          <!-- 명소 3: 소양강 스카이워크 & 번개시장 (저녁/밤) -->
+          <tr>
+            <td><span class="category-badge badge-sight">명소</span></td>
+            <td style="font-weight: bold">소양강 스카이워크 & 번개시장</td>
+            <td>
+              투명한 유리 바닥 아래로 흐르는 소양강 스릴을 느끼고 은은한 일몰과
+              야경 조명을 감상하는 코스
+            </td>
+            <td style="color: #1e1b4b; font-weight: 600">🌙 저녁/밤</td>
+          </tr>
+
+          <!-- 맛집 1: 감자밭 카페 (오전) -->
+          <tr>
+            <td><span class="category-badge badge-food">맛집</span></td>
+            <td style="font-weight: bold">감자밭 카페 (춘천 감자빵)</td>
+            <td>
+              진짜 감자와 똑같이 생긴 쫀득하고 달콤한 원조 감자빵과 시그니처
+              감자라떼로 여는 아침
+            </td>
+            <td style="color: #0284c7; font-weight: 600">☀️ 오전</td>
+          </tr>
+
+          <!-- 맛집 2: 우성닭갈비 (점심) -->
+          <tr>
+            <td><span class="category-badge badge-food">맛집</span></td>
+            <td style="font-weight: bold">우성닭갈비 (명동 닭갈비 골목)</td>
+            <td>
+              춘천의 상징이자 부드러운 닭고기를 무쇠 철판에 매콤하게 볶아
+              볶음밥까지 코스로 먹는 점심
+            </td>
+            <td style="color: #ea580c; font-weight: 600">⛅ 점심</td>
+          </tr>
+
+          <!-- 맛집 3: 샘밭막국수 (저녁) -->
+          <tr>
+            <td><span class="category-badge badge-food">맛집</span></td>
+            <td style="font-weight: bold">샘밭막국수 (본점)</td>
+            <td>
+              메밀 향 가득하고 고소하며 자극적이지 않아 하루 여행 마무리에 부담
+              없는 명품 전통 막국수
+            </td>
+            <td style="color: #1e1b4b; font-weight: 600">🌙 저녁</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <!-- ===== 푸터 영역: 저작권 정보 ===== -->
+    <footer>
+      <p>&copy; 2026 국내 여행 가이드 프로젝트. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

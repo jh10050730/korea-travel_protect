@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>국내 여행 가이드 - 강릉</title>
+    <!-- 외부 스타일시트 연결 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== 헤더 영역: 로고 + 내비게이션 메뉴 ===== -->
+    <header>
+      <!-- 로고: 클릭 시 메인(index) 페이지로 이동 -->
+      <a href="index.html" class="logo">🗺️ 국내 여행 가이드</a>
+
+      <!-- 상단 내비게이션 메뉴: 도시별 페이지 링크 -->
+      <nav>
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="seoul.html">서울</a></li>
+          <li><a href="busan.html">부산</a></li>
+          <li><a href="jeju.html">제주</a></li>
+          <li><a href="gyeongju.html">경주</a></li>
+          <li><a href="gangneung.html" class="active">강릉</a></li>
+          <!-- 현재 페이지 활성화 표시 -->
+          <li><a href="incheon.html">인천</a></li>
+          <li><a href="jeonju.html">전주</a></li>
+          <li><a href="yeosu.html">여수</a></li>
+          <li><a href="chuncheon.html">춘천</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== 히어로 섹션: 강릉 대표 배경 이미지 + 소개 문구 ===== -->
+    <section class="sub-hero hero-gangneung">
+      <h2>Gangneung, 커피와 파도 소리</h2>
+    </section>
+
+    <!-- ===== 메인 콘텐츠 영역 ===== -->
+    <main class="container">
+      <!-- 섹션 제목 -->
+      <h3 class="section-title">📍 강릉 핵심 로컬 정보 큐레이션</h3>
+
+      <!-- 강릉 명소/맛집 정보 테이블 -->
+      <!-- ※ 명소 3개 + 맛집 3개 구성 / 추천 시간대별 색상 구분 적용 -->
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>분류</th>
+            <th>이름</th>
+            <th>특징 및 추천 이유</th>
+            <th>추천 시간대</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 명소 1: 정동진역 & 바다부채길 (아침) -->
+          <tr>
+            <td><span class="category-badge badge-sight">명소</span></td>
+            <td style="font-weight: bold">정동진역 & 바다부채길</td>
+            <td>
+              세계에서 바다와 가장 가까운 기차역에서 맞이하는 일출과 해안 단구
+              탐방 코스
+            </td>
+            <td style="color: #0284c7; font-weight: 600">☀️ 아침</td>
+          </tr>
+
+          <!-- 명소 2: 오죽헌 & 선교장 (점심/오후) -->
+          <tr>
+            <td><span class="category-badge badge-sight">명소</span></td>
+            <td style="font-weight: bold">오죽헌 & 선교장</td>
+            <td>
+              신사임당과 이이의 생가인 오죽헌과 조선 시대 사대부가의 고즈넉함을
+              느끼는 문화재
+            </td>
+            <td style="color: #ea580c; font-weight: 600">⛅ 점심/오후</td>
+          </tr>
+
+          <!-- 명소 3: 안목해변 커피거리 (저녁/밤) -->
+          <tr>
+            <td><span class="category-badge badge-sight">명소</span></td>
+            <td style="font-weight: bold">안목해변 커피거리</td>
+            <td>
+              잔잔한 동해 밤바다를 바라보며 로컬 바리스타들의 명품 커피를 즐기는
+              힐링 해변
+            </td>
+            <td style="color: #1e1b4b; font-weight: 600">🌙 저녁/밤</td>
+          </tr>
+
+          <!-- 맛집 1: 초당토박이할머니순두부 (아침/오전) -->
+          <tr>
+            <td><span class="category-badge badge-food">맛집</span></td>
+            <td style="font-weight: bold">초당토박이할머니순두부</td>
+            <td>
+              깨끗한 동해 바닷물로 간을 맞춰 몽글몽글하고 담백함이 살아있는
+              초당순두부 백반
+            </td>
+            <td style="color: #0284c7; font-weight: 600">☀️ 아침/오전</td>
+          </tr>
+
+          <!-- 맛집 2: 강릉 동화가든 (점심) -->
+          <tr>
+            <td><span class="category-badge badge-food">맛집</span></td>
+            <td style="font-weight: bold">강릉 동화가든 (짬뽕순두부)</td>
+            <td>
+              불향 가득한 매콤한 짬뽕 국물에 부드러운 순두부를 말아 먹는 강릉
+              최고의 미식 줄서는집
+            </td>
+            <td style="color: #ea580c; font-weight: 600">⛅ 점심</td>
+          </tr>
+
+          <!-- 맛집 3: 강릉 중앙시장 배니닭강정 (저녁) -->
+          <tr>
+            <td><span class="category-badge badge-food">맛집</span></td>
+            <td style="font-weight: bold">강릉 중앙시장 배니닭강정</td>
+            <td>
+              현지인과 관광객 모두에게 사랑받는 달콤매콤하고 바삭한 닭강정과
+              수제 어묵고로케 골목
+            </td>
+            <td style="color: #1e1b4b; font-weight: 600">🌙 저녁</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <!-- ===== 푸터 영역: 저작권 정보 ===== -->
+    <footer>
+      <p>&copy; 2026 국내 여행 가이드 프로젝트. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

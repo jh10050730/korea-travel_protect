@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>국내 여행 가이드 - 경주</title>
+    <!-- 외부 스타일시트 연결 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== 헤더 영역: 로고 + 내비게이션 메뉴 ===== -->
+    <header>
+      <!-- 로고: 클릭 시 메인(index) 페이지로 이동 -->
+      <a href="index.html" class="logo">🗺️ 국내 여행 가이드</a>
+
+      <!-- 상단 내비게이션 메뉴: 도시별 페이지 링크 -->
+      <nav>
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="seoul.html">서울</a></li>
+          <li><a href="busan.html">부산</a></li>
+          <li><a href="jeju.html">제주</a></li>
+          <li><a href="gyeongju.html" class="active">경주</a></li>
+          <!-- 현재 페이지 활성화 표시 -->
+          <li><a href="gangneung.html">강릉</a></li>
+          <li><a href="incheon.html">인천</a></li>
+          <li><a href="jeonju.html">전주</a></li>
+          <li><a href="yeosu.html">여수</a></li>
+          <li><a href="chuncheon.html">춘천</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== 히어로 섹션: 경주 대표 배경 이미지 + 소개 문구 ===== -->
+    <section class="sub-hero hero-gyeongju">
+      <h2>Gyeongju, 천년 신라의 숨결</h2>
+    </section>
+
+    <!-- ===== 메인 콘텐츠 영역 ===== -->
+    <main class="container">
+      <!-- 섹션 제목 -->
+      <h3 class="section-title">📍 경주 핵심 로컬 정보 큐레이션</h3>
+
+      <!-- 경주 명소/맛집 정보 테이블 -->
+      <!-- ※ 명소 3개 + 맛집 3개 구성 / 추천 시간대별 색상 구분 적용 -->
+      <table class="info-table">
+        <thead>
+          <tr>
+            <!-- 테이블 헤더: 분류 / 이름 / 특징 / 추천 시간대 -->
+            <th>분류</th>
+            <th>이름</th>
+            <th>특징 및 추천 이유</th>
+            <th>추천 시간대</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 명소 항목 1: 불국사 & 석굴암 (아침 추천) -->
+          <tr>
+            <td><span class="category-badge badge-sight">명소</span></td>
+            <td style="font-weight: bold">불국사 & 석굴암</td>
+            <td>
+              유네스코 세계문화유산으로 신라 불교 예술과 고즈넉한 숲길을
+              만끽하는 장소
+            </td>
+            <td style="color: #0284c7; font-weight: 600">☀️ 아침</td>
+          </tr>
+
+          <!-- 명소 항목 2: 대릉원 & 첨성대 (점심/오후 추천) -->
+          <tr>
+            <td><span class="category-badge badge-sight">명소</span></td>
+            <td style="font-weight: bold">대릉원 & 첨성대</td>
+            <td>
+              거대한 능들 사이 산책로와 동양에서 가장 오래된 천문대인 첨성대를
+              만나는 중심 코스
+            </td>
+            <td style="color: #ea580c; font-weight: 600">⛅ 점심/오후</td>
+          </tr>
+
+          <!-- 명소 항목 3: 동궁과 월지 (안압지) (저녁/밤 추천) -->
+          <tr>
+            <td><span class="category-badge badge-sight">명소</span></td>
+            <td style="font-weight: bold">동궁과 월지 (안압지)</td>
+            <td>
+              은은한 조명이 켜진 고궁 건물이 연못에 투영되는 대한민국 최고의
+              명품 야경 코스
+            </td>
+            <td style="color: #1e1b4b; font-weight: 600">🌙 저녁/밤</td>
+          </tr>
+
+          <!-- 맛집 항목 1: 교리김밥 본점 (아침/오전 추천) -->
+          <tr>
+            <td><span class="category-badge badge-food">맛집</span></td>
+            <td style="font-weight: bold">교리김밥 본점</td>
+            <td>
+              잘게 썬 달걀지단이 듬뿍 들어가 부드럽고 담백한 맛으로 여행 시작에
+              먹기 좋은 김밥
+            </td>
+            <td style="color: #0284c7; font-weight: 600">☀️ 아침/오전</td>
+          </tr>
+
+          <!-- 맛집 항목 2: 함양집 (한우물회) (점심 추천) -->
+          <tr>
+            <td><span class="category-badge badge-food">맛집</span></td>
+            <td style="font-weight: bold">함양집 (한우물회)</td>
+            <td>
+              새콤달콤하고 시원한 한우 육회물회와 고소한 치즈불고기가 일품인
+              경주 최고 핫플
+            </td>
+            <td style="color: #ea580c; font-weight: 600">⛅ 점심</td>
+          </tr>
+
+          <!-- 맛집 항목 3: 황리단길 한옥 레스토랑가 (저녁 추천) -->
+          <tr>
+            <td><span class="category-badge badge-food">맛집</span></td>
+            <td style="font-weight: bold">황리단길 한옥 레스토랑가</td>
+            <td>
+              트렌디한 한옥 개조 맛집과 분위기 좋은 바(Bar), 감성 카페들이
+              모여있는 저녁 코스
+            </td>
+            <td style="color: #1e1b4b; font-weight: 600">🌙 저녁</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <!-- ===== 푸터 영역: 저작권 정보 ===== -->
+    <footer>
+      <p>&copy; 2026 국내 여행 가이드 프로젝트. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

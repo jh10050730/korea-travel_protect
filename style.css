@@ -1,0 +1,296 @@
+/* ==========================================
+   1. 초기화 및 브라우저 베이스 설정
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* 패딩과 테두리 두께를 폭(width) 안에 포함시켜 화면 깨짐을 방지합니다. */
+}
+
+body {
+  font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+  background-color: #f7f9fa; /* 웹사이트 전체의 부드러운 연회색 배경색 */
+  color: #333333; /* 기본 본문 글자색 */
+  line-height: 1.6; /* 가독성을 위한 줄간격 */
+}
+
+a {
+  text-decoration: none; /* 하이퍼링크의 기본 밑줄을 제거합니다. */
+  color: inherit; /* 링크 글자색이 변하지 않고 부모의 색상을 따르도록 합니다. */
+}
+
+ul {
+  list-style: none; /* 리스트 앞에 붙는 점(불릿) 기호를 제거합니다. */
+}
+
+/* ==========================================
+   2. 공통 상단 네비게이션 바 (Header)
+   ========================================== */
+header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between; /* 로고는 왼쪽, 메뉴는 오른쪽 끝으로 배치 */
+  align-items: center; /* 상하 정중앙 수직 정렬 */
+  padding: 20px 40px;
+  position: sticky; /* 스크롤을 내려도 화면 상단에 항상 고정되는 기능 */
+  top: 0;
+  z-index: 1000; /* 본문 콘텐츠가 메뉴 위로 올라오지 못하도록 레이어 순위 최상위 부여 */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* 헤더 하단의 은은한 입체 그림자 효과 */
+}
+
+header .logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+header nav ul {
+  display: flex; /* 세로로 나오는 리스트를 가로로 한 줄 정렬 */
+  gap: 15px; /* 상단 메뉴 글자들 사이의 일정한 간격 */
+}
+
+header nav ul li a {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #64748b;
+  padding: 6px 2px;
+  transition: all 0.3s ease; /* 마우스를 올렸을 때 반응하는 애니메이션 속도 */
+}
+
+/* [기능] 마우스를 올리거나(hover), 현재 활성화된 페이지(active) 메뉴에 푸른색 테마색과 밑줄을 적용합니다. */
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+}
+
+/* ==========================================
+   3. 메인 페이지 전용 대형 배너 (Hero Banner)
+   ========================================== */
+.hero {
+  /* 이미지 위에 어두운 그라데이션 필터를 씌워 흰색 글씨가 잘 보이도록 대비를 줍니다. */
+  background:
+    linear-gradient(rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.7)),
+    url("images/hero.jpg") no-repeat center/cover;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 타이틀 텍스트를 배너 정중앙에 배치 */
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.hero-text p {
+  font-size: 1.15rem;
+  opacity: 0.9;
+}
+
+/* ==========================================
+   4. 레이아웃 컨테이너 및 섹션 타이틀
+   ========================================== */
+.container {
+  max-width: 1200px; /* 본문 최대 너비를 제한하여 큰 모니터에서도 가운데 정렬되도록 함 */
+  margin: 50px auto;
+  padding: 0 20px; /* 모바일 화면에서 글자가 양 끝에 붙지 않도록 여백 확보 */
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 35px;
+}
+
+/* ==========================================
+   5. 반응형 카드 그리드 & 마우스 호버 모션 UX
+   ========================================== */
+.card-grid {
+  display: grid;
+  /* 화면 크기에 맞춰 카드 개수가 자동으로 조절되는 반응형 레이아웃 기술 (최소 320px 폭 유지) */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px; /* 카드와 카드 사이의 공백 */
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden; /* 내부 이미지가 들릴 때 둥근 모서리 바깥으로 튀어나가는 것을 커팅 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover; /* 사진 비율이 찌그러지지 않게 꽉 채우는 기능 */
+  transition: all 0.3s ease;
+}
+
+.card-body {
+  padding: 25px;
+}
+.card-body h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+.card-body p {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+/* ⚡ [기능] 카드 위에 마우스를 올리면 카드가 위로 부드럽게 슥 떠오르는 인터랙션 효과 */
+.card:hover {
+  transform: translateY(-10px); /* 위쪽으로 10px 수직 이동 */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08); /* 그림자를 넓혀 붕 뜬 느낌 연출 */
+}
+.card:hover img {
+  transform: scale(1.03); /* 이미지 미세 확대 줌인 효과 */
+}
+
+/* ==========================================
+   6. 서브 상세 페이지 전용 배너 및 9개 전체 지역 배경 매핑
+   ========================================== */
+.sub-hero {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+.sub-hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* [기능] 각 .html 파일별 서브 배너 클래스에 맞춰 9개 지역 고유 이미지를 정확하게 일대일 매핑합니다. */
+/* 1. 서울 배경 이미지 */
+.hero-seoul {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("images/seoul.jpg") no-repeat center/cover;
+}
+/* 2. 부산 배경 이미지 */
+.hero-busan {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("images/busan.jpg") no-repeat center/cover;
+}
+/* 3. 제주 배경 이미지 */
+.hero-jeju {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("images/jeju.jpg") no-repeat center/cover;
+}
+/* 4. 경주 배경 이미지 */
+.hero-gyeongju {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("images/gyeongju.jpg") no-repeat center/cover;
+}
+/* 5. 강릉 배경 이미지 */
+.hero-gangneung {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("images/gangneung.jpg") no-repeat center/cover;
+}
+/* 6. 인천 배경 이미지 */
+.hero-incheon {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("images/incheon.jpg") no-repeat center/cover;
+}
+/* 7. 전주 배경 이미지 */
+.hero-jeonju {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("images/jeonju.jpg") no-repeat center/cover;
+}
+/* 8. 여수 배경 이미지 */
+.hero-yeosu {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("images/yeosu.jpg") no-repeat center/cover;
+}
+/* 9. 춘천 배경 이미지 */
+.hero-chuncheon {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("images/chuncheon.jpg") no-repeat center/cover;
+}
+
+/* ==========================================
+   7. 상세 페이지 로컬 정보 표 (Table) 컴포넌트
+   ========================================== */
+.info-table {
+  width: 100%;
+  border-collapse: collapse; /* 테두리 선이 이중으로 생기는 현상을 방지하고 하나로 합칩니다. */
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.info-table th {
+  background-color: #2c3e50; /* 대본의 핵심 테마 컬러인 네이비 배치 */
+  color: #ffffff;
+  font-weight: bold;
+  text-align: left;
+  padding: 18px 20px;
+}
+
+.info-table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #e2e8f0; /* 가로 가독성을 위한 부드러운 구분선 */
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.info-table tr:last-child td {
+  border-bottom: none; /* 표의 맨 마지막 줄 밑바닥 선은 지워서 둥근 모서리와 깔끔하게 마감합니다. */
+}
+
+.info-table tr:hover {
+  background-color: #f8fafc; /* 사용자가 읽고 있는 줄에 연한 회색 음영 하이라이트를 주는 기능 */
+}
+
+/* 🏷️ 분류 필드 가독성을 위한 라운드형 카테고리 뱃지 박스 */
+.category-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+/* 명소 뱃지 (스카이블루 톤) */
+.badge-sight {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+/* 맛집 뱃지 (오렌지/골드 톤) */
+.badge-food {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+/* ==========================================
+   8. 사이트 하단 공통 푸터 (Footer)
+   ========================================== */
+footer {
+  background-color: #2c3e50;
+  color: #94a3b8;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 80px;
+  font-size: 0.9rem;
+}

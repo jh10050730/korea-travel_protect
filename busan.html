@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>국내 여행 가이드 - 부산</title>
+    <!-- 외부 스타일시트 연결 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== 헤더 영역: 로고 + 내비게이션 메뉴 ===== -->
+    <header>
+      <!-- 로고: 클릭 시 메인(index) 페이지로 이동 -->
+      <a href="index.html" class="logo">🗺️ 국내 여행 가이드</a>
+
+      <!-- 상단 내비게이션 메뉴: 도시별 페이지 링크 -->
+      <nav>
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="seoul.html">서울</a></li>
+          <li><a href="busan.html" class="active">부산</a></li>
+          <!-- 현재 페이지 활성화 표시 -->
+          <li><a href="jeju.html">제주</a></li>
+          <li><a href="gyeongju.html">경주</a></li>
+          <li><a href="gangneung.html">강릉</a></li>
+          <li><a href="incheon.html">인천</a></li>
+          <li><a href="jeonju.html">전주</a></li>
+          <li><a href="yeosu.html">여수</a></li>
+          <li><a href="chuncheon.html">춘천</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== 히어로 섹션: 부산 대표 배경 이미지 + 소개 문구 ===== -->
+    <section class="sub-hero hero-busan">
+      <h2>Busan, 해변과 열정의 도시</h2>
+    </section>
+
+    <!-- ===== 메인 콘텐츠 영역 ===== -->
+    <main class="container">
+      <!-- 섹션 제목 -->
+      <h3 class="section-title">📍 부산 핵심 로컬 정보 큐레이션</h3>
+
+      <!-- 부산 명소/맛집 정보 테이블 -->
+      <!-- ※ 부산 페이지는 명소 3개 + 맛집 3개로 구성 / 추천 시간대별 색상 구분 적용 -->
+      <table class="info-table">
+        <thead>
+          <tr>
+            <!-- 테이블 헤더: 분류 / 이름 / 특징 / 추천 시간대 -->
+            <th>분류</th>
+            <th>이름</th>
+            <th>특징 및 추천 이유</th>
+            <th>추천 시간대</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 명소 항목 1: 해동용궁사 (아침 추천) -->
+          <tr>
+            <td><span class="category-badge badge-sight">명소</span></td>
+            <td style="font-weight: bold">해동용궁사</td>
+            <td>
+              끝없이 펼쳐진 푸른 동해바다 기암괴석 위에 우뚝 솟은 이색적인 수상
+              사찰
+            </td>
+            <td style="color: #0284c7; font-weight: 600">☀️ 아침</td>
+          </tr>
+
+          <!-- 명소 항목 2: 감천문화마을 (점심/오후 추천) -->
+          <tr>
+            <td><span class="category-badge badge-sight">명소</span></td>
+            <td style="font-weight: bold">감천문화마을</td>
+            <td>
+              한국의 산토리니라 불리는 알록달록한 계단식 마을과 어린왕자 포토존
+              명소
+            </td>
+            <td style="color: #ea580c; font-weight: 600">⛅ 점심/오후</td>
+          </tr>
+
+          <!-- 명소 항목 3: 광안리 해수욕장 & 엘시티 (저녁/밤 추천) -->
+          <tr>
+            <td><span class="category-badge badge-sight">명소</span></td>
+            <td style="font-weight: bold">광안리 해수욕장 & 엘시티</td>
+            <td>
+              화려한 스카이라인과 밤하늘을 수놓는 광안대교 야경을 한눈에 담는
+              바다 코스
+            </td>
+            <td style="color: #1e1b4b; font-weight: 600">🌙 저녁/밤</td>
+          </tr>
+
+          <!-- 맛집 항목 1: 신발원 (아침/오전 추천) -->
+          <tr>
+            <td><span class="category-badge badge-food">맛집</span></td>
+            <td style="font-weight: bold">신발원 (초량 차이나타운)</td>
+            <td>
+              백종원의 3대천왕에도 나온, 바삭한 군만두와 육즙 가득한 찐만두가
+              일품인 노포
+            </td>
+            <td style="color: #0284c7; font-weight: 600">☀️ 아침/오전</td>
+          </tr>
+
+          <!-- 맛집 항목 2: 해운대 원조 돼지국밥 (점심 추천) -->
+          <tr>
+            <td><span class="category-badge badge-food">맛집</span></td>
+            <td style="font-weight: bold">해운대 원조 돼지국밥</td>
+            <td>
+              부산 로컬의 자부심이 담긴 깊고 진한 육수의 따끈한 돼지국밥 한 그릇
+            </td>
+            <td style="color: #ea580c; font-weight: 600">⛅ 점심</td>
+          </tr>
+
+          <!-- 맛집 항목 3: 민락수변공원 활어회센터 (저녁 추천) -->
+          <tr>
+            <td><span class="category-badge badge-food">맛집</span></td>
+            <td style="font-weight: bold">민락수변공원 활어회센터</td>
+            <td>
+              광안대교의 시원한 밤바람을 맞으며 가성비 좋고 신선한 회를 즐기는
+              핫플레이스
+            </td>
+            <td style="color: #1e1b4b; font-weight: 600">🌙 저녁</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <!-- ===== 푸터 영역: 저작권 정보 ===== -->
+    <footer>
+      <p>&copy; 2026 국내 여행 가이드 프로젝트. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
